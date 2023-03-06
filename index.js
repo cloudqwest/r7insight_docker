@@ -94,7 +94,12 @@ function start(opts) {
 
     if (token) {
       LOGGER.debug(`Stringifying object and prepending log token: ${token}`);
-
+      delete obj.id;
+      delete obj.image;
+      delete obj.name;
+      delete obj.time;
+      delete obj.host;
+      delete obj.type;
       this.push(token);
       this.push(' ');
       this.push(JSON.stringify(obj));
