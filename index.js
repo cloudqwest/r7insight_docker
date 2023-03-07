@@ -94,8 +94,8 @@ function start(opts) {
 
     if (token) {
       LOGGER.debug(`Stringifying object and prepending log token: ${token}`);
-      if (obj.long_id) { delete obj.long_id } ;
-      if (obj.v) { delete obj.v } ;
+      if (obj.long_id != undefined) { delete obj.long_id } ;
+      if (obj.v != undefined) { delete obj.v } ;
       delete obj.id;
       delete obj.image;
       delete obj.name;
