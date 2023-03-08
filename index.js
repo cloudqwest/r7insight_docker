@@ -200,6 +200,7 @@ function parse_args(process_args) {
     .option('-a, --add <NAME>=<VALUE>', 'Add KVPs to the data being published', [ 'host=' + os.hostname() ])
     .option('-i, --statsinterval <STATS_INTERVAL>', 'Downsample stats send to Insight Platform', 30)
     .option('-j, --json', 'Stream logs in JSON format', false)
+    .option('-n, --newline', 'Newline character recognized', true)
     .option('-e, --eventstoken <EVENTS_TOKEN>', 'Specify log token for forwarding events', process.env.INSIGHT_EVENTSTOKEN)
     .option('-l, --logstoken <LOGS_TOKEN>', 'Specify log token for logs', process.env.INSIGHT_LOGSTOKEN)
     .option('-k, --statstoken <STATS_TOKEN>', 'Specify log token for forwarding statistics', process.env.INSIGHT_STATSTOKEN)
